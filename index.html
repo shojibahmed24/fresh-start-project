@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#A855F7" />
+
+    <!-- PWA / Installable app (no service worker — Add to Home Screen only) -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- iOS standalone web-app -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="OneClick Studio" />
+
+    <title>OneClick Studio — Build mobile apps with one click</title>
+    <meta name="description" content="OneClick Studio generates, edits, and manages mobile apps with an intelligent AI software engineer.">
+    <meta name="author" content="OneClick Studio" />
+
+    <!-- TODO: Update og:title to match your application name -->
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6bb908d4-d49c-482e-a0d7-319157d52a78/id-preview-982e5451--b235d7f8-472b-44a8-a0bf-41d02a4728bc.lovable.app-1776729896857.png">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6bb908d4-d49c-482e-a0d7-319157d52a78/id-preview-982e5451--b235d7f8-472b-44a8-a0bf-41d02a4728bc.lovable.app-1776729896857.png">
+
+    <!-- Geist Sans (400/500/600/700) + Geist Mono (400). Loaded non-blocking
+         via the print→all swap trick so first paint is never gated on
+         Google Fonts. font-display:swap (in the &display=swap query param)
+         keeps text visible while web fonts download. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400&display=swap"
+      />
+    </noscript>
+    <meta property="og:title" content="OneClick Studio">
+  <meta name="twitter:title" content="OneClick Studio">
+  <meta property="og:description" content="OneClick Studio generates, edits, and manages mobile apps with an intelligent AI software engineer.">
+  <meta name="twitter:description" content="OneClick Studio generates, edits, and manages mobile apps with an intelligent AI software engineer.">
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

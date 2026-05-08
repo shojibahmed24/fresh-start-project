@@ -1,0 +1,1 @@
+UPDATE agent_runs SET status='error', error_message='Stuck during planner — fixed in next deploy', finished_at=now() WHERE status='running' AND started_at < now() - interval '5 minutes';

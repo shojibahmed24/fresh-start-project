@@ -1,0 +1,1 @@
+UPDATE public.agent_runs SET status='error', error_message='Stalled: previous Inngest dispatcher never invoked the worker. Please retry.', finished_at=now() WHERE status IN ('queued','running') AND started_at < now() - interval '30 seconds';
