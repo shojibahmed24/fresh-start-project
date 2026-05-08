@@ -5,6 +5,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import { Logo } from "@/components/Logo";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { AuroraBackground } from "@/components/landing/AuroraBackground";
 import { HeroReveal } from "@/components/landing/HeroReveal";
@@ -46,6 +47,19 @@ const steps = [
 const Index = () => {
   const reduce = useReducedMotion();
   const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-[100dvh] grid place-items-center bg-background">
+        <div className="flex flex-col items-center gap-3 opacity-80">
+          <Logo size="sm" />
+          <div className="h-1 w-24 overflow-hidden rounded-full bg-muted">
+            <div className="h-full w-1/2 animate-[shimmer_1.2s_linear_infinite] bg-primary" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!loading && user) {
     return <Navigate to="/dashboard" replace />;
